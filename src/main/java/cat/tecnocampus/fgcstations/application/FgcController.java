@@ -37,7 +37,7 @@ public class FgcController {
     }
 
     public Station getStation(String nom) {
-        return stationDAO.findByName(nom);
+        return stationDAO.findByNom(nom);
     }
 
     public User getUser(String username) {
@@ -97,8 +97,8 @@ public class FgcController {
     private FavoriteJourney convertFavoriteJourneyDTO(FavoriteJourneyDTO favoriteJourneyDTO) {
         FavoriteJourney favoriteJourney = new FavoriteJourney();
         favoriteJourney.setId(UUID.randomUUID().toString());
-        Journey journey = new Journey(stationDAO.findByName(favoriteJourneyDTO.getOrigin()),
-                                      stationDAO.findByName(favoriteJourneyDTO.getDestination()),
+        Journey journey = new Journey(stationDAO.findByNom(favoriteJourneyDTO.getOrigin()),
+                                      stationDAO.findByNom(favoriteJourneyDTO.getDestination()),
                                       "empty id");
         favoriteJourney.setJourney(journey);
 
