@@ -7,6 +7,7 @@ import cat.tecnocampus.fgcstations.application.DTOs.FriendsDTO;
 import cat.tecnocampus.fgcstations.application.exception.UserDoesNotExistsException;
 import cat.tecnocampus.fgcstations.application.persistence.*;
 import cat.tecnocampus.fgcstations.domain.*;
+import cat.tecnocampus.fgcstations.persistence.*;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

@@ -1,7 +1,15 @@
 package cat.tecnocampus.fgcstations.domain;
 
-public class Station {
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import org.springframework.data.annotation.Id;
 
+@Entity(name = "Station")
+public class Station {
+    @Id
+    @GeneratedValue
+
+    private String Id;
     private String nom;
 
     private String longitud;

@@ -1,4 +1,4 @@
-package cat.tecnocampus.fgcstations.application.persistence;
+package cat.tecnocampus.fgcstations.persistence;
 
 import cat.tecnocampus.fgcstations.domain.Station;
 import org.springframework.data.jpa.repository.JpaRepository;

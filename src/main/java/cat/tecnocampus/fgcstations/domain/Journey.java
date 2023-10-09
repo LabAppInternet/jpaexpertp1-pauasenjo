@@ -2,11 +2,17 @@ package cat.tecnocampus.fgcstations.domain;
 
 
 import cat.tecnocampus.fgcstations.domain.exceptions.SameOriginDestinationException;
+import jakarta.persistence.*;
 
+import javax.annotation.processing.Generated;
+
+@Entity(name="Journey")
 public class Journey {
-
+    @Id
+    @GeneratedValue
     private String id;
-
+    @ManyToOne
+    private FavoriteJourney favoriteJourney;
     private Station origin;
     private Station destination;
 

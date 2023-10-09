@@ -1,11 +1,18 @@
 package cat.tecnocampus.fgcstations.domain;
 
+import jakarta.persistence.*;
+
 import java.util.List;
-
+@Entity(name="FavoriteJourney")
 public class FavoriteJourney {
-
+    @Id
+    @GeneratedValue
     private String id;
+    @ManyToOne
+    User user;
+    @OneToMany
     private List<DayTimeStart> startList;
+    @ManyToOne
     private Journey journey;
 
 

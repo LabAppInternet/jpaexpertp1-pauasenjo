@@ -1,17 +1,19 @@
 package cat.tecnocampus.fgcstations.domain;
 
+import jakarta.persistence.*;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-
+@Entity(name = "User")
 public class User implements Serializable {
+    @Id
+    @GeneratedValue
     private String username;
-
     private String name;
     private String secondName;
-
     private String email;
-
+    @OneToMany
     public List<FavoriteJourney> favoriteJourneyList;
 
     public User() {
